@@ -17,7 +17,7 @@ app.use(express.json())
 
 // Option 2: Allow custom origins app.use(
    //cors({
-     // origin: 'http://localhost:7000',
+     // origin: 'https://bookstore-mern-stack-4m6h.onrender.com',
      // methods: ['GET', 'POST', 'PUT', 'DELETE'],
      // allowedHeaders: ['Content-Type'], */
    //})

@@ -14,7 +14,7 @@ const DeleteBook = () => {
    const handleDeleteBook = () => {
     setLoading(true);
     axios
-    .delete(`http://localhost:7000/books/${id}`)
+    .delete(`https://bookstore-mern-stack-4m6h.onrender.com/books/${id}`)
     .then(() => {
         setLoading(false)
         enqueueSnackbar('Book deleted successfully', {variant: 'success'});
@@ -28,13 +28,13 @@ const DeleteBook = () => {
    };
 
   return (
-    <div classname='p-4'>
+    <div className='p-4'>
       <BackButton />
 
       <h1 className='text-3xl my-4'>Delete Book</h1>
       {loading ? <Spinner />: ''}
 
-      <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
+      <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl lg:w-[600px] p-6 mx-auto md:w-[400px] sm:[300px]'>
             <h3 className='text-2xl'>Are you sure you want to delete this book?</h3>
 
 

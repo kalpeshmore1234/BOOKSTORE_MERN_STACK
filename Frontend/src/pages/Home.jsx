@@ -17,7 +17,7 @@ const Home = () => {
       setLoading(true);
 
       axios
-      .get('http://localhost:7000/books')
+      .get('https://bookstore-mern-stack-4m6h.onrender.com/books')
       .then((response) => {
         console.log(books)
         setBooks(response.data.data);

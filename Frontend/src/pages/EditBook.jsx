@@ -17,7 +17,7 @@ const EditBook = () => {
     
     useEffect(() =>{
         setLoading(true);
-        axios.get(`http://localhost:7000/books/${id}`)
+        axios.get(`https://bookstore-mern-stack-4m6h.onrender.com/books/${id}`)
         .then((response) => {
             setAuthor(response.data.author);
             setPublishYear(response.data.publishYear)
@@ -38,7 +38,7 @@ const EditBook = () => {
         };
         setLoading(true);
         axios.
-           put(`http://localhost:7000/books/${id}`, data)
+           put(`https://bookstore-mern-stack-4m6h.onrender.com/books/${id}`, data)
            .then(() => {
               setLoading(false);
               enqueueSnackbar('Book Edited successfully', {variant: 'success'});
@@ -59,7 +59,7 @@ const EditBook = () => {
         {
             loading ? <Spinner /> : ''
         }
-        <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
+        <div className='flex flex-col border-2 border-sky-400 rounded-xl lg:w-[600px] p-4 mx-auto  md:w-[400px] sm:[300px]'>
             <div className='my-4'>
                <label className='text-xl mr-4 text-gray-500'>Title</label>
                <input

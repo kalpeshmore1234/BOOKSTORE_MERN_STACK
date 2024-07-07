@@ -21,7 +21,7 @@ const CreateBooks = () => {
         };
         setLoading(true);
         axios.
-           post('http://localhost:7000/books', data)
+           post('https://bookstore-mern-stack-4m6h.onrender.com/books', data)
            .then(() => {
               setLoading(false);
               enqueueSnackbar('Book created successfully', { variant: 'success'});
@@ -42,7 +42,7 @@ const CreateBooks = () => {
         {
             loading ? <Spinner /> : ''
         }
-        <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
+        <div className='flex flex-col border-2 border-sky-400 rounded-xl lg:w-[600px] p-4 mx-auto md:w-[400px] sm:[300px]' >
             <div className='my-4'>
                <label className='text-xl mr-4 text-gray-500'>Title</label>
                <input
